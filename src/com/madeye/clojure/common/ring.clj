@@ -60,6 +60,9 @@
   ([error error-description]
     (build-error-response 400 { :error error :error-description error-description})
   )
+  ([ex]
+    (get-error-response "invalid_request" (.getMessage ex) (:code (ex-data ex)))
+  )
 )
 
 
