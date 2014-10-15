@@ -3,7 +3,7 @@
   <groupId>com.madeye.clojure.common</groupId>
   <artifactId>ring</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <name>ring</name>
   <description>Common ring utility code to be shared between clojure projects</description>
   <url>https://github.com/madeye-matt/clojure-common-ring</url>
@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/madeye-matt/clojure-common-ring.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/madeye-matt/clojure-common-ring.git</developerConnection>
-    <tag>3c1ed22045aaa032228890d47470513b5bbedcc5</tag>
+    <tag>feda4dab235729a32b0e0d67bba0063f7aec627e</tag>
     <url>https://github.com/madeye-matt/clojure-common-ring</url>
   </scm>
   <build>
