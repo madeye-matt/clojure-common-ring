@@ -50,18 +50,22 @@
   )
 )
 
+(def ^:const default-error-status 400)
+
 (defn get-error-response
   ([status error error-description error-reason]
     (build-error-response status { :error error :error-description error-description :error-reason error-reason})
   )
   ([error error-description error-reason]
-    (build-error-response 400 { :error error :error-description error-description :error-reason error-reason})
+    (build-error-response default-error-status { :error error :error-description error-description :error-reason error-reason})
   )
   ([error error-description]
-    (build-error-response 400 { :error error :error-description error-description})
+    (build-error-response default-error-status { :error error :error-description error-description})
   )
   ([ex]
-    (get-error-response "invalid_request" (.getMessage ex) (:code (ex-data ex)))
+    (let [error-status (or (:status (ex-data ex)) default-error-status)]
+      (get-error-response error-status "invalid_request" (.getMessage ex) (:code (ex-data ex)))
+    )
   )
 )
 
