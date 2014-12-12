@@ -1,4 +1,4 @@
-(defproject com.madeye.clojure.common/ring "0.1.3"
+(defproject com.madeye.clojure.common/ring "0.1.4"
   :description "Common ring utility code to be shared between clojure projects"
   :url "https://github.com/madeye-matt/clojure-common-ring"
   :license {:name "Eclipse Public License"

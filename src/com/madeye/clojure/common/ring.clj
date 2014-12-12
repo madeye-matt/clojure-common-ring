@@ -8,7 +8,8 @@
 
 (timbre/refer-timbre)
 
-(def media-type-error "application/vnd.com.madeye.error+json")
+(def ^:const media-type-error "application/vnd.com.madeye.error+json")
+(def ^:const default-media-type "application/json")
 
 (defmulti get-boolean
   (fn [b] (class b))
@@ -30,6 +31,9 @@
   )
   ([media-type response-map]
     (get-json-response 200 media-type response-map)
+  )
+  ([response-map]
+    (get-json-response 200 default-media-type response-map)
   )
 )
 
@@ -64,6 +68,7 @@
   )
   ([ex]
     (let [error-status (or (:status (ex-data ex)) default-error-status)]
+      (debug "error-status: " error-status)
       (get-error-response error-status "invalid_request" (.getMessage ex) (:code (ex-data ex)))
     )
   )
