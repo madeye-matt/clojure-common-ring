@@ -6,18 +6,18 @@ This project contains function definitions that are (hopefully) useful across al
 
 leiningen
 
-    [com.madeye.clojure.common/ring "0.1.3"]
+    [com.madeye.clojure.common/ring "0.1.4"]
 
 gradle
 
-    compile "com.madeye.clojure.common:ring:0.1.3"
+    compile "com.madeye.clojure.common:ring:0.1.4"
 
 maven
 
     <dependency>
       <groupId>com.madeye.clojure.common</groupId>
       <artifactId>ring</artifactId>
-      <version>0.1.3</version>
+      <version>0.1.4</version>
     </dependency>
 
 ### Bugs
